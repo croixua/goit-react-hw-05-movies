@@ -37,7 +37,7 @@ export default function MovieDetailsPage() {
       </button>
 
       {movieDetails && (
-        <MovieView movieDetails={movieDetails} fromPage={fromPage} />
+        <MovieView movieDetails={movieDetails} fromPage={location} />
       )}
       {error && <NotFound message={error} />}
 

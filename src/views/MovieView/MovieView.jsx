@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 export default function MovieView({ movieDetails, fromPage }) {
+  const from = fromPage?.state?.from || '/';
   const { poster_path, original_title, overview, genres, vote_average } =
     movieDetails;
 
@@ -28,12 +29,12 @@ export default function MovieView({ movieDetails, fromPage }) {
         <p>Additional information</p>
         <ul>
           <li>
-            <Link to={'cast'} state={{ from: { fromPage } }}>
+            <Link to={'cast'} state={{ from }}>
               Cast
             </Link>
           </li>
           <li>
-            <Link to={'reviews'} state={{ from: { fromPage } }}>
+            <Link to={'reviews'} state={{ from }}>
               Reviews
             </Link>
           </li>

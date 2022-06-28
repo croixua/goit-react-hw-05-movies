@@ -1,5 +1,8 @@
+import { useLocation } from 'react-router-dom';
+
 export default function MovieReviewsView({ reviews }) {
-  console.log(reviews);
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <hr />

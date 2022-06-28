@@ -19,7 +19,7 @@ const checkDates = ({ results }) => {
 };
 
 const checkMovie = obj => {
-  if (!obj || obj.success === false) {
+  if (!obj || obj.success === false || obj.cast) {
     return Promise.reject(new Error(`Not found movie`));
   }
 
